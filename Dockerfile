@@ -6,7 +6,7 @@ Run mkdir -p /opt/logs
 Run mkdir -p /opt/code
 
 COPY telnetlogger.c /opt/code/telnetlogger.c
-COPY Makefile
+COPY Makefile /opt/code/Makefile
 RUN gcc -o /opt/code/telnetlogger /opt/code/telnetlogger.c -Wall -lpthread
 
 Expose 21
