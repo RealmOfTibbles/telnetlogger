@@ -9,7 +9,7 @@ COPY telnetlogger.c /opt/code/telnetlogger.c
 COPY Makefile /opt/code/Makefile
 RUN gcc -o /opt/code/telnetlogger /opt/code/telnetlogger.c -Wall -lpthread
 
-Expose 21
+Expose 23
 
 ENTRYPOINT ["bash"]
-CMD ["-c","/opt/code/telnetlogger -l 21 -p /opt/logs/Credentials.txt -i /opt/logs/Ips.txt"]
+CMD ["-c","/opt/code/telnetlogger -l 23 -p /opt/logs/Credentials.txt -i /opt/logs/Ips.txt"]
