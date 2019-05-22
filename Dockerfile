@@ -1,9 +1,9 @@
-FROM ubuntu:18.04
-RUN apt-get update
-RUN apt-get install build-essential -y
+FROM ubuntu:latest
 
 Run mkdir -p /opt/logs
 Run mkdir -p /opt/code
+
+RUN apt-get update && apt-get install build-essential -y
 
 COPY telnetlogger.c /opt/code/telnetlogger.c
 COPY Makefile /opt/code/Makefile
